@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Resources/css/style.css" />
+    <title>Clinic Management System - Login/Register</title>
+  </head>
+  <body>
+    <div id="heading_container">
+      <div id="heading_conntainer">
+        <h1 id="auth_heading">Clinic Management System</h1>
+      </div>
+      <div class="container" id="container">
+        <div class="form-container sign-up">
+          <section id="registrationSection">
+            <h1>Create Account</h1>
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Password"
+              required
+            />
+            <select id="registerRole" required>
+              <option value="" hidden>Select Role</option>
+              <option value="receptionist">Receptionist</option>
+              <option value="doctor">Doctor</option>
+            </select>
+            <button id="registerButton">Register</button>
+          </section>
+        </div>
+
+        <div class="form-container sign-in">
+          <section id="loginSection">
+            <h1>Login</h1>
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button id="loginButton">Login</button>
+          </section>
+        </div>
+
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome!</h1>
+              <p id="registerError">
+                Already have an account? Enter your details to use all of site
+                features
+              </p>
+              <button class="hidden" id="switchToLoginButton">Login</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+              <h1>Hello!</h1>
+              <p id="loginError"></p>
+              <p>
+                Don't have an account? Register with your details to use all of
+                site features
+              </p>
+              <button class="hidden" id="switchToRegisterButton">
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="Resources/javascript/auth.js"></script>
+</html>
